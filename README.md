@@ -1,4 +1,4 @@
-#FRONTEND MENTO STUDY
+# FRONTEND MENTO STUDY
 
 ### 인프런 html, css 스터디
 - https://www.frontendmentor.io/
