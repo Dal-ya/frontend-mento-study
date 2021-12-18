@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0D1A2E;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /*
+        ** card wrapper
+        */
+        .card_wrapper {
+            width: 280px;
+            padding: 16px;
+            border-radius: 5px;
+            background-color: #152740;
+        }
+
+        .card_img {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .card_img img {
+            width: 100%;
+            margin: 0;
+            border-radius: 5px;
+        }
+
+        .card_img > .overlay {
+            position: absolute;
+            top: 0;
+            /*bottom: 0;*/
+            left: 0;
+            /*right: 0;*/
+            height: 280px;
+            width: 100%;
+            opacity: 0;
+            border-radius: 5px;
+            transition: .2s linear;
+            background-color: #008CBA;
+        }
+
+        .card_img > .overlay_icon {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            visibility: hidden;
+        }
+
+        .card_img:hover .overlay {
+            opacity: 0.4;
+        }
+
+        .card_img:hover .overlay_icon {
+            visibility: visible;
+        }
+
+        /*
+        ** card title
+        */
+        .card_title {
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .card_title:hover {
+            color: #008CBA;
+        }
+
+        /*
+        ** card description
+        */
+        .card_description {
+            color: #8BACDAFF;
+        }
+
+        /*
+        ** card sub info
+        */
+        .card_sub_info {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid  #8BACDAFF;
+        }
+
+        .sub_info_box {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+
+        .sub_info_box p {
+            padding-left: 4px;
+        }
+
+        .sub_info_box > .price {
+            color:  #00FFF8;
+            font-weight: 700;
+        }
+
+        .sub_info_box > .due {
+            color: #8BACDAFF;
+        }
+
+        /*
+        ** card_footer
+        */
+        .card_footer {
+            display: flex;
+            padding-top: 10px;
+        }
+
+        .card_footer > .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .card_footer > .profile > img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid #FFFFFF;
+        }
+
+        .card_footer > p {
+            padding-left: 14px;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+
+        .card_footer > p > span {
+            color: #8BACDAFF;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="card_wrapper">
+        <div class="card_img">
+            <img src="./images/image-equilibrium.jpg" alt="equilibrium">
+            <div class="overlay"></div>
+            <div class="overlay_icon">
+                <img src="./images/icon-view.svg" alt="eye icon">
+            </div>
+        </div>
+        <div class="card_title">
+            <h1>Equilibrium #3429</h1>
+        </div>
+        <div class="card_description">
+            <p>Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="card_sub_info">
+            <div class="sub_info_box sub_info_box_left">
+                <img src="./images/icon-ethereum.svg" alt="ethereum">
+                <p class="price">0.041 ETH</p>
+            </div>
+            <div class="sub_info_box sub_info_box_right">
+                <img src="./images/icon-clock.svg" alt="clock">
+                <p class="due">3 days left</p>
+            </div>
+        </div>
+        <div class="card_footer">
+            <div class="profile">
+                <img src="./images/image-avatar.png" alt="avatar">
+            </div>
+            <p>
+                <span>Creation of</span> Jules Wyvern
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
