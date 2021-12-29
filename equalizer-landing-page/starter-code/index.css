@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./assets/bg-main-desktop.png");
+}
+
+/*
+  *  Todo
+  *    1. layout -> display(1440px), tablet(768px), mobile(375px)
+  *    2. make common var
+*/
+
+.display-layout-wrapper {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.brand-img {
+    position: absolute;
+    width: 312px;
+    height: 468px;
+    right: 0;
+    top: -40px;
+}
+
+nav {
+    height: 155px;
+    border: 1px solid transparent;
+}
+
+.nav-logo {
+    margin-top: 61.99px;
+}
+
+.title-section {
+    height: 461px;
+}
+
+.ts-title h1 {
+    max-width: 963px;
+    position: relative;
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 88px;
+    letter-spacing: -1px;
+}
+
+.ts-description {
+    max-width: 842px;
+    margin-top: 40px;
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    color: #191826;
+}
+
+.content-section {
+    height: 996px;
+    padding-top: 247px;
+}
+
+.cs-contents {
+    position: relative;
+}
+
+.bag-dark {
+    height: 600px;
+    border-radius: 12px;
+    background-color: #191826;
+    overflow: hidden;
+}
+
+.bag-dark img {
+    margin-top: -40px;
+    margin-left: 336px;
+}
+
+.iphone {
+    position: absolute;
+    left: 102px;
+    bottom: 171px;
+}
+
+.iphone img {
+    width: 312px;
+    height: 642px;
+}
+
+.pricing {
+    max-width: 446px;
+    height: 625px;
+    border-radius: 12px;
+    background-color: #FA7453;
+    position: absolute;
+    top: 90px;
+    right: 95px;
+    padding-top: 58px;
+    padding-left: 54px;
+    padding-right: 59px;
+}
+
+.pricing-title {
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 52px;
+    color: #FCFAF9;
+    margin-bottom: 22px;
+}
+
+.pricing-desc {
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 34px;
+    color: #FCFAF9;
+    margin-bottom: 39px;
+}
+
+.pricing-cost {
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.2px;
+    color: #FCFAF9;
+    margin-bottom: 46px;
+}
+
+.pricing-cost span:nth-child(1) {
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 52px;
+}
+
+.pricing-buttons {
+    display: flex;
+    flex-direction: column;
+    height: 138px;
+    justify-content: space-between;
+}
+
+.download-btn {
+    height: 61px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.download-btn-content {
+    height: 32px;
+    display: flex;
+    align-content: center;
+}
+
+.iphone-btn {
+    background-color: #191826;
+}
+
+.iphone-btn:hover {
+    background-color: #66E2DC;
+}
+
+.android-btn {
+    background-color: #FCFAF9;
+}
+
+.android-btn:hover {
+    background-color: #FFB964;
+}
+
+.iphone-btn-content img {
+    width: 17.08px;
+    height: 20px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-right: 7.92px;
+}
+
+.android-btn-content img {
+    width: 16.7px;
+    height: 20px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    margin-right: 7.8px;
+}
+
+.iphone-btn-content span {
+    color: #FCFAF9;
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.18px;
+}
+
+.android-btn-content span {
+    color: #191826;
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+footer {
+    /* TODO: Change height -> padding */
+    /*height: 223px;*/
+    padding-top: 53px;
+    padding-bottom: 91px;
+}
+
+.footer-contents {
+    display: flex;
+}
+
+.footer-logo {
+    width: 28.5%;
+}
+
+.footer-copy {
+    width: 36.6%;
+    min-width: 366px;
+    height: 79px;
+    font-family: IBM Plex Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.footer-email {
+    color: #191826;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-social {
+    width: 45.9%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footer-social-contents {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-social-contents svg {
+    cursor: pointer;
+}
+
+.footer-social-contents svg:hover path {
+    fill: #FA7453;
+}
