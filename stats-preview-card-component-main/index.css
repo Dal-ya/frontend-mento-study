@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&display=swap');
+
+
+:root {
+    --global-font: 'Inter', sans-serif;
+    --global-font-style: normal;
+    --primary-color: #AB5CDB;
+    --display-bg-color: #0A0C1C;
+    --main-contents-bg-color: #1B1937;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* 1rem = 10px */
+    /*font-size: 62.5%;*/
+}
+
+.display-wrapper {
+    width: 100%;
+    position: relative;
+    padding: 88px 24px 100px 24px;
+    min-width: 375px;
+    font-family: var(--global-font);
+    font-style: var(--global-font-style);
+    background-color: var(--display-bg-color);
+}
+
+.main-contents-wrapper {
+    color: #FFFFFF;
+    max-width: 327px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--main-contents-bg-color);
+}
+
+.main-contents-img-wrapper .overlay {
+    position: relative;
+}
+
+.main-contents-img-wrapper .overlay:before {
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    /* 이미지 높이 맞춤 */
+    height:240px;
+    width:100%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index:100;
+}
+
+.main-contents-img-wrapper img {
+    width: 100%;
+}
+
+.main-contents-text-wrapper {
+    padding: 32px 31px;
+}
+
+.main-contents-text-box {
+    margin: 0 auto;
+    width: 264px;
+}
+
+.main-contents-text-title h1{
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.main-contents-text-title span {
+    color: var(--primary-color);
+}
+
+.main-contents-text-desc {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    mix-blend-mode: normal;
+    opacity: 0.75;
+}
+
+.main-contents-text-info {
+    margin-top: 40px;
+    text-align: center;
+    height: 216px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-contents-text-info .numbers {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main-contents-text-info .text {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
