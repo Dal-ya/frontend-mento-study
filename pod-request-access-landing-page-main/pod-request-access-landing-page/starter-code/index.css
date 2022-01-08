@@ -1,0 +1,159 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+
+:root {
+    --bg-color: #121725;
+    --pod-global-font-style: 'Chivo', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--pod-global-font-style);
+}
+
+.body-wrapper {
+    position: relative;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+    .display-wrapper {
+        position: relative;
+        min-width: 340px;
+        max-width: 375px;
+        margin: 0 auto;
+        background-color: var(--bg-color);
+        /* https://stackoverflow.com/questions/36679649/how-to-add-a-color-overlay-to-a-background-image */
+        background-image: url("./assets/mobile/image-host.jpg");
+        background-blend-mode: overlay;
+        padding: 62px 24px 94px 24px;
+
+        /* TODO: Remove  */
+        /*border: 1px solid white;*/
+    }
+
+    .contents__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 57px;
+    }
+
+    .contents__text {
+        text-align: center;
+        margin-bottom: 33px;
+    }
+
+    .contents__text--main {
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 26px;
+        line-height: 38px;
+        color: #FFFFFF;
+        margin-bottom: 16px;
+    }
+
+    .contents__text--main span {
+        color: #54E6AF;
+    }
+
+    .contents__text--sub {
+        font-size: 15px;
+        line-height: 25px;
+        color: #C2CBE5;
+    }
+
+    .contents__partner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 48px;
+    }
+
+    .contents__partner--spotify {
+        width: 56px;
+    }
+
+    .contents__partner--apple {
+        width: 45px;
+    }
+
+    .contents__partner--google {
+        width: 73px;
+        height: 11px;
+    }
+
+    .contents__partner--pocket {
+        width: 77px;
+    }
+
+    .contents__subscribe-form{
+        height: 108px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .contents__subscribe-input,
+    .contents__subscribe-btn {
+        width: 100%;
+        height: 46px;
+    }
+
+    .contents__subscribe-input input {
+        width: 100%;
+        height: 100%;
+        background-color: #2C344B;
+        border-radius: 28px;
+        padding-left: 32px;
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 28px;
+    }
+
+    .contents__subscribe-input input:focus {
+        outline: none;
+    }
+
+    .contents__subscribe-invalid {
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+    }
+
+    .contents__subscribe-invalid .error {
+        color: #FB3E3E;
+        font-size: 12px;
+    }
+
+    .contents__subscribe-btn button{
+        width: 100%;
+        height: 100%;
+        border-radius: 28px;
+        background-color: #54E6AF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+    }
+
+    .contents__subscribe-btn span {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .contents__subscribe-btn button:hover {
+        background-color: #B3FFE2;
+        cursor: pointer;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 768px){
+
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+
+}
+

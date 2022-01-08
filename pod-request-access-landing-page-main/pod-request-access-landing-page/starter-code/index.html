@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="stylesheet" href="./index.css">
+    <title>공부</title>
+</head>
+<body>
+<!-- body-wrapper 는 브라우저 전체 사이즈 wrapper 입니다 -->
+<div class="body-wrapper">
+    <div class="display-wrapper">
+        <div class="contents">
+            <div class="contents__logo">
+                <img src="./assets/desktop/logo.svg" alt="logo">
+            </div>
+            <div class="contents__text">
+                <h1 class="contents__text--main">
+                    <span>Publish your podcasts</span> everywhere.
+                </h1>
+                <p class="contents__text--sub">
+                    Upload your audio to Pod with a single click. We’ll then distribute your
+                    podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!
+                </p>
+            </div>
+            <div class="contents__partner">
+                <img class="contents__partner--spotify" src="./assets/desktop/spotify.svg" alt="spotify">
+                <img class="contents__partner--apple" src="./assets/desktop/apple-podcast.svg" alt="apple">
+                <img class="contents__partner--google" src="./assets/desktop/google-podcasts.svg" alt="google">
+                <img class="contents__partner--pocket" src="./assets/desktop/pocket-casts.svg" alt="pocket">
+            </div>
+            <div class="contents__subscribe">
+                <form id="subscribe-form" class="contents__subscribe-form">
+                    <div class="contents__subscribe-input">
+                        <input id="subscribe-input" type="text" placeholder="Email address"/>
+                    </div>
+                    <div class="contents__subscribe-invalid">
+                        <!-- 이메일 유효성 검증 실패시 에러 문구를 보여줍니다 -->
+                        <span id="subscribe-error" class="error"></span>
+                    </div>
+                    <div class="contents__subscribe-btn">
+                        <button type="submit">
+                            <div><span>Request Access</span></div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module">
+    // 모듈은 http or https 에서 동작합니다. vs 에디터의 live server 등을 활용합니다.
+    import {validateEmail} from "./util.js";
+
+    const subscribeForm = document.getElementById('subscribe-form');
+    const subscribeInput = document.getElementById('subscribe-input');
+    const subscribeError = document.getElementById('subscribe-error');
+
+    subscribeInput.addEventListener('focus', () => {
+        subscribeError.innerText = '';
+    });
+
+    subscribeForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const isValidateEmail = validateEmail(subscribeInput.value);
+
+        if (!isValidateEmail) {
+            subscribeError.innerText = 'Oops! Please check your email';
+            return;
+        }
+
+        console.log('success-access!');
+    });
+</script>
+</body>
+</html>
