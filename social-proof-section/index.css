@@ -16,9 +16,63 @@ body {
   background-color: #f1e8f1;
 }
 
+/* card style */
+.card {
+  height: 248px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.card__reviewer {
+  display: flex;
+  margin-bottom: 22px;
+}
+
+.card__reviewer-avatar {
+  margin-right: 23px;
+}
+
+.card__reviewer-avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.card__reviewer-profile__wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.card__reviewer-profile {
+  font-size: 13px;
+}
+
+.card__reviewer-profile-name {
+  font-weight: 700;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+
+.card__reviewer-profile-job {
+  font-weight: 400;
+  color: #EE69A4;
+}
+
+.card__text {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 22px;
+  letter-spacing: -0.23px;
+  color: #FFFFFF;
+}
 
 /* mobile */
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1020px) {
   .wrapper {
     position: relative;
     overflow: hidden;
@@ -112,69 +166,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
-
-  .card {
-    height: 248px;
-    background-color: var(--primary-color);
-    border-radius: 8px;
-    padding-top: 40px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-
-  .card__reviewer {
-    display: flex;
-    margin-bottom: 22px;
-  }
-
-  .card__reviewer-avatar {
-    margin-right: 23px;
-  }
-
-  .card__reviewer-avatar img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  .card__reviewer-profile__wrapper {
-    height: 40px;
-    display: flex;
-    align-items: center;
-  }
-
-  .card__reviewer-profile {
-    font-size: 13px;
-  }
-
-  .card__reviewer-profile-name {
-    font-weight: 700;
-    line-height: 15px;
-    color: #FFFFFF;
-    margin-bottom: 5px;
-  }
-
-  .card__reviewer-profile-job {
-    font-weight: 400;
-    color: #EE69A4;
-  }
-
-  .card__text {
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 22px;
-    letter-spacing: -0.23px;
-    color: #FFFFFF;
-  }
-
 }
 
 /* desktop */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1021px) {
   .wrapper {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
+    background-color: #FFFFFF;
     max-width: 1440px;
     padding: 127px 165px 100px 165px;
   }
@@ -199,5 +199,115 @@ body {
     display: none;
   }
 
+  @media screen and (min-width: 1300px) {
+    .title-rating-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .title {
+      width: 445px;
+      z-index: 99;
+      margin-right: 30px;
+    }
+  }
+
+  .rating {
+    padding-top: 18px;
+    padding-bottom: 17px;
+  }
+
+  .title__main {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: -1.71px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+
+  .title__sub {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.5px;
+    color: #927B91;
+  }
+
+  .rating__info {
+    width: 445px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 32px;
+    border-radius: 8px;
+    background-color: #F7F2F7;
+  }
+
+  .rating__info-wrapper {
+    display: flex;
+  }
+
+  .rating__info-star {
+    margin-right: 33px;
+  }
+
+  .rating__info-text {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 14.56px;
+    color: var(--primary-color);
+  }
+
+  .rating-info-reviews,
+  .rating-info-report,
+  .rating-info-best {
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1300px) {
+    .rating-info-reviews {
+      margin-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    .rating-info-report {
+      margin-left: 72px;
+      margin-bottom: 16px;
+    }
+
+    .rating-info-best {
+      margin-left: 119px;
+    }
+  }
+
+  .review {
+    margin-top: 32px;
+  }
+
+  .card {
+    max-width: 350px;
+    height: 234px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  @media screen and (min-width: 1400px) {
+    .review {
+      margin-top: 72px;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+    }
+
+    .card:nth-child(2) {
+      margin-top: 16px;
+    }
+
+    .card:nth-child(3) {
+      margin-top: 32px;
+    }
+  }
 
 }
