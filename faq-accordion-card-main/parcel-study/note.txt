@@ -1,0 +1,28 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  // code
+}
+
+/* tablet */
+@media screen and (min-width: 768px){
+	// code
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+	// code
+}
+
+
+# parcel
+https://parceljs.org/languages/pug/
+https://heropy.blog/2018/01/20/parcel-1-start/
+
+# parcel-posthtml
+https://dev.to/aileenr/blazing-fast-frontend-development-with-parcel-21dc
+
+# parcel error (cssnano)
+https://stackoverflow.com/questions/67951491/parcel-build-is-failing-bundle-scssundefinedundefined-plugin-is-not-a-functi
+
+# scss break points
+https://medium.com/codeartisan/breakpoints-and-media-queries-in-scss-46e8f551e2f2

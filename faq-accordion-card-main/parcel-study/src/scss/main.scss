@@ -1,0 +1,160 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./bs_accordion.scss";
+@import "./breakpoints.scss";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700&display=swap');
+
+$primary-color-blue: hsl(238, 29%, 16%);
+$primary-color-red: hsl(14, 88%, 65%);
+$bg-color-violet: hsl(273, 75%, 66%);
+$bg-color-blue: hsl(240, 73%, 65%);
+$neutral-color-darkblue: hsl(237, 12%, 33%);
+$neutral-color-blue: hsl(240, 6%, 50%);
+$netural-color-gray: hsl(240, 5%, 91%);
+$default-font-size: 1.2rem;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  padding-top: 120px;
+  background: linear-gradient($bg-color-violet, $bg-color-blue);
+  font-size: $default-font-size;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+}
+
+main {
+  position: relative;
+  margin: 0 auto;
+  width: 327px;
+  height: 540px;
+  padding: 128px 24px 48px 24px;
+  background-color: #FFFFFF;
+  border-radius: 23px;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+
+  .pattern-box-desktop {
+    @include desktop {
+      position: absolute;
+      top: 40%;
+      left: -11%;
+      z-index: 99;
+      content: url('../images/illustration-box-desktop.svg');
+    }
+  }
+
+  .pattern-women {
+    position: absolute;
+    width: 236px;
+    top: -110px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    content: url('../images/illustration-woman-online-mobile.svg');
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .pattern-base {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    content: url('../images/bg-pattern-mobile.svg');
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    width: 740px;
+    height: 509px;
+    padding: 65px 37px 83px 353px;
+    background-image: url('../images/illustration-woman-online-desktop.svg'), url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left -55%, top 70% left 285%;
+  }
+
+  @include desktop {
+    width: 920px;
+    height: 509px;
+    padding: 65px 95px 83px 475px;
+    background-image: url('../images/illustration-woman-online-desktop.svg'), url('../images/bg-pattern-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: top 50% left -18%, top 65% left 1250%;
+  }
+}
+
+.faq-wrapper {
+  height: 370px;
+  overflow: scroll;
+
+  // 마우스 스크롤 표시 관련 가로 크기 지정
+  @include mobile {
+    width: 300px;
+  }
+
+  @include tablet {
+    width: 370px;
+  }
+
+  @include desktop {
+    width: 370px;
+  }
+}
+
+.faq {
+  width: 279px;
+  height: 100%;
+
+  @include tablet {
+    width: 350px;
+  }
+
+  @include desktop {
+    width: 350px;
+  }
+  
+  .faq-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 20px;
+
+    @include tablet {
+      text-align: left;
+    }
+
+    @include desktop {
+      text-align: left;
+    }
+  }
+
+  .accordion-button {
+    color: $primary-color-blue;
+    font-size: 1.3rem;
+    padding: 15px 0;
+
+    @include tablet {
+      font-size: 1.4rem;
+    }
+
+    @include desktop {
+      font-size: 1.4rem;
+    }
+  }
+
+  .accordion-collapse {
+    color: $neutral-color-blue;
+  }
+}

@@ -1,0 +1,136 @@
+@import "../../node_modules/bootstrap/scss/accordion";
+
+//
+// Base styles
+//
+
+/** 변수명 참고 */
+// https://getbootstrap.com/docs/5.1/components/accordion/
+
+$accordion-button-bg: #FFFFFF;
+$accordion-border-color: #FFFFFF;
+$accordion-button-active-color: black;
+$accordion-button-active-bg: #FFFFFF;
+$accordion-button-icon: url('data:image/svg+xml,<svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>');
+$accordion-button-active-icon: url('data:image/svg+xml,<svg width="10" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>');
+$accordion-button-focus-box-shadow: none;
+$accordion-button-focus-border-color: none;
+$accordion-button-padding-x: 0;
+
+.accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: $accordion-button-padding-y $accordion-button-padding-x;
+  @include font-size($font-size-base);
+  color: $accordion-button-color;
+  text-align: left; // Reset button style
+  background-color: $accordion-button-bg;
+  border: 0;
+  border-bottom: 1px solid #E8E8EA;
+  @include border-radius(0);
+  overflow-anchor: none;
+  @include transition($accordion-transition);
+
+  &:not(.collapsed) {
+    font-weight: bold;
+    color: $accordion-button-active-color;
+    background-color: $accordion-button-active-bg;
+    box-shadow: inset 0 ($accordion-border-width * -1) 0 $accordion-border-color;
+    border-bottom: #FFFFFF;
+    &::after {
+      background-image: escape-svg($accordion-button-active-icon);
+      transform: $accordion-icon-transform;
+    }
+  }
+
+  // Accordion icon
+  &::after {
+    flex-shrink: 0;
+    width: $accordion-icon-width;
+    height: $accordion-icon-width;
+    margin-left: auto;
+    content: "";
+    background-image: escape-svg($accordion-button-icon);
+    background-repeat: no-repeat;
+    background-size: $accordion-icon-width;
+    @include transition($accordion-icon-transition);
+  }
+
+  &:hover {
+    z-index: 2;
+  }
+
+  &:focus {
+    z-index: 3;
+    outline: 0;
+    border-color: $accordion-button-focus-border-color;
+    box-shadow: $accordion-button-focus-box-shadow;
+  }
+}
+
+.accordion-header {
+  margin-bottom: 0;
+  
+}
+
+.accordion-item {
+  background-color: $accordion-bg;
+  border: $accordion-border-width solid $accordion-border-color;
+
+  &:first-of-type {
+    @include border-top-radius($accordion-border-radius);
+
+    .accordion-button {
+      @include border-top-radius($accordion-inner-border-radius);
+    }
+  }
+
+  &:not(:first-of-type) {
+    border-top: 0;
+  }
+
+  // Only set a border-radius on the last item if the accordion is collapsed
+  &:last-of-type {
+    @include border-bottom-radius($accordion-border-radius);
+
+    .accordion-button {
+      &.collapsed {
+        @include border-bottom-radius($accordion-inner-border-radius);
+      }
+    }
+
+    .accordion-collapse {
+      @include border-bottom-radius($accordion-border-radius);
+    }
+  }
+}
+
+.accordion-body {
+  padding: $accordion-body-padding-y $accordion-body-padding-x;
+}
+
+
+// Flush accordion items
+//
+// Remove borders and border-radius to keep accordion items edge-to-edge.
+
+.accordion-flush {
+  .accordion-collapse {
+    border-width: 0;
+  }
+
+  .accordion-item {
+    border-right: 0;
+    border-left: 0;
+    @include border-radius(0);
+
+    &:first-child { border-top: 0; }
+    &:last-child { border-bottom: 0; }
+
+    .accordion-button {
+      @include border-radius(0);
+    }
+  }
+}
