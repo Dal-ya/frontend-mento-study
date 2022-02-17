@@ -1,0 +1,26 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  // code
+}
+
+/* tablet */
+@media screen and (min-width: 768px){
+	// code
+}
+
+/* desktop */
+@media screen and (min-width: 1440px) {
+	// code
+}
+
+
+---------------
+/* 데스크탑 */
+
+@media screen and (max-width:1023px) {
+/* 타블렛 */
+}
+
+@media screen and (max-width:767px) {
+/* 모바일 */
+}

@@ -1,0 +1,215 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  background-color: #485861;
+  color: #ffe6cf;
+  font-size: 62.5%;
+}
+
+/* mobile first */
+
+.main-contents-area {
+  max-width: 1280px;
+  min-width: 340px;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  padding: 1.2rem;
+  border: 1px solid;
+}
+
+nav .menu {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+nav .sub {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .sub .about {
+  margin-right: 12px;
+}
+
+.hero-section .hero-bg {
+  height: 60vh;
+  border: 1px solid;
+  border-top: none;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./flower.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section .hero-bg .hero-text {
+  text-align: center;
+}
+
+.hero-section .hero-bg .hero-text h1{
+  font-size: 2rem;
+}
+
+.hero-section .hero-bg .hero-text p {
+  font-size: 1.6rem;
+  padding: 1rem;
+}
+
+.hero-section .hero-bg .hero-text .btn-contact-me {
+  font-size: 1.2rem;
+  text-align: center;
+  border: 2px solid;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0.3rem;
+  margin-top: 40px;
+}
+
+.btn-contact-me {
+  cursor: pointer;
+}
+
+.about-section {
+  text-align: center;
+  border: 1px solid;
+  border-top: transparent;
+  padding: 1.5rem 0;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+}
+
+.about-section p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+}
+
+.about-feature-wrapper {
+  margin-top: 1rem;
+}
+
+.about-feature-wrapper .about-feature {
+  font-size: 1.1rem;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.visible-pc.about-feature {
+  display: none;
+}
+
+.portfolio-section {
+  border: 1px solid;
+  border-top: none;
+  padding: 1.5rem 0;
+}
+
+.portfolio-section h2 {
+  font-size: 1.8rem;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.portfolio-wrapper {
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.portfolio-wrapper .portfolio {
+  width: 10rem;
+  height: 10rem;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 10rem;
+  border: 1px solid;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+footer .footer-img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+
+/* tablet */
+@media screen and (min-width: 768px){
+  .hero-section .hero-bg .hero-text h1{
+    font-size: 2.4rem;
+  }
+
+  .about-section p {
+    width: 40rem;
+    margin: 0 auto;
+    line-height: 1.4rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-feature-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .portfolio-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1024px){
+  .visible-pc.about-feature {
+    display: flex;
+  }
+
+  .about-feature-wrapper {
+    max-width: 1024px;
+  }
+
+  .portfolio-wrapper {
+    max-width: 1000px;
+  }
+}
