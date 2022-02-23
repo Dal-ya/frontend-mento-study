@@ -13,6 +13,10 @@
     href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
   />
 
+  <style>
+    @import "pagination.css";
+  </style>
+
 </head>
 <body>
 <div class="display-wrapper">
@@ -51,9 +55,14 @@
           <div class="button">
             <span>자세히보기 +</span>
           </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination-fraction"></div>
+          <div class="swiper-pagination bullet-wrapper"></div>
         </div>
         <div class="swiper info-card">
           <div class="swiper-wrapper">
+            <!--   group-1    -->
             <div class="swiper-slide">
               <div class="card">
                 <div class="card-img">
@@ -144,10 +153,99 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">s5</div>
-            <div class="swiper-slide">s6</div>
-            <div class="swiper-slide">s7</div>
-            <div class="swiper-slide">s8</div>
+
+            <!--   group-2    -->
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./assets/card_img_05.png" alt="" width="100%" height="100%" />
+                </div>
+                <div class="tag">
+                  <div class="tag-text">
+                    <span>#문화시설</span>
+                  </div>
+                  <div class="tag-text">
+                    <span>#유동인구</span>
+                  </div>
+                </div>
+                <div class="title">
+                  <h2>TEST5</h2>
+                </div>
+                <div class="right-arrow-btn">
+                  <img src="./assets/right-arrow-btn-default.svg" alt="상세페이지 버튼">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./assets/card_img_06.png" alt="" width="100%" height="100%" />
+                </div>
+                <div class="tag">
+                  <div class="tag-text">
+                    <span>#작은미술관</span>
+                  </div>
+                  <div class="tag-text">
+                    <span>#유동인구</span>
+                  </div>
+                </div>
+                <div class="title">
+                  <h2>TEST6</h2>
+                </div>
+                <div class="right-arrow-btn">
+                  <img src="./assets/right-arrow-btn-default.svg" alt="상세페이지 버튼">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./assets/card_img_07.png" alt="" width="100%" height="100%" />
+                </div>
+                <div class="tag">
+                  <div class="tag-text">
+                    <span>#예술</span>
+                  </div>
+                  <div class="tag-text">
+                    <span>#지원사업</span>
+                  </div>
+                  <div class="tag-text">
+                    <span>#분야</span>
+                  </div>
+                </div>
+                <div class="title">
+                  <h2>TEST7</h2>
+                </div>
+                <div class="right-arrow-btn">
+                  <img src="./assets/right-arrow-btn-default.svg" alt="상세페이지 버튼">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="card-img">
+                  <img src="./assets/card_img_08.png" alt="" width="100%" height="100%" />
+                </div>
+                <div class="tag">
+                  <div class="tag-text">
+                    <span>#예술</span>
+                  </div>
+                  <div class="tag-text">
+                    <span>#지원사업</span>
+                  </div>
+                  <div class="tag-text">
+                    <span>#분야</span>
+                  </div>
+                </div>
+                <div class="title">
+                  <h2>TEST8</h2>
+                </div>
+                <div class="right-arrow-btn">
+                  <img src="./assets/right-arrow-btn-default.svg" alt="상세페이지 버튼">
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -159,10 +257,36 @@
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.info-card', {
+    freeMode: false,
+    loop: false,
     slidesPerView: 4,
     spaceBetween: 25,
-    freeMode: true
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<span class="' + className + '">' + '<span class="dot"></span>' + "</span>";
+      },
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
+
+  const pagingFraction = new Swiper('.info-card', {
+    slidesPerView: 4,
+    spaceBetween: 25,
+    freeMode: false,
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination-fraction',
+      type: 'fraction'
+    },
+  });
+
+  // https://www.biew.co.kr/tag/swiper%20custom
+  swiper.controller.control = pagingFraction;
 </script>
 </body>
 </html>

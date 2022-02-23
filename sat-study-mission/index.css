@@ -83,7 +83,7 @@
 /* ========================== */
 
 .contents-top-section {
-  padding-top: 30px;
+  padding-top: 45px;
 }
 
 
@@ -96,6 +96,7 @@
 }
 
 .contents-top-wrapper .desc {
+  position: relative;
   padding-top: 56px;
 }
 
@@ -121,9 +122,14 @@
   color: #f9be2c;
   font-size: 1.2rem;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.6;
   cursor: pointer;
-  margin-top: 165px;
+  margin-top: 155px;
+  font-weight: bold;
+}
+
+.contents-top-wrapper .desc .button:hover {
+  background-color: #444444;
 }
 
 .contents-top-wrapper .swiper {
