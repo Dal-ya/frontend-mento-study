@@ -1,0 +1,198 @@
+@import url('reset.css');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.display-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+
+  /* Todo: remove */
+  border: 1px dashed dodgerblue;
+  height: 1000px;
+}
+
+.display-wrapper-top-bg {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 522px;
+  background-color: #f9be2c;
+}
+
+.container {
+  padding: 0 80px;
+}
+
+
+/* ========================== */
+/** nav */
+/* ========================== */
+
+.nav-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 35px;
+}
+
+.logo a {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+.menu ul li a:hover {
+  border-bottom: 2px solid;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1470px){
+  .menu ul {
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .menu ul {
+  }
+}
+
+/* ========================== */
+/** contents-top-section */
+/* ========================== */
+
+.contents-top-section {
+  padding-top: 30px;
+}
+
+
+/* ========================== */
+/** contents-top */
+/* ========================== */
+
+.contents-top-wrapper {
+  display: flex;
+}
+
+.contents-top-wrapper .desc {
+  padding-top: 56px;
+}
+
+.contents-top-wrapper .desc .text h1{
+  font-size: 3.6rem;
+  font-weight: bold;
+  letter-spacing: 1.8px;
+}
+
+.contents-top-wrapper .desc .text p {
+  width: 240px;
+  font-size: 1.14rem;
+  line-height: 1.56;
+  padding-top: 18px;
+}
+
+.contents-top-wrapper .desc .button {
+  width: 316px;
+  height: 70px;
+  padding: 20px 101px 21px;
+  border-radius: 36px;
+  background-color: #222222;
+  color: #f9be2c;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.5;
+  cursor: pointer;
+  margin-top: 165px;
+}
+
+.contents-top-wrapper .swiper {
+  margin-left: 100px;
+  width: 1380px;
+  min-width: 1380px;
+
+  /* todo: remove */
+  /*border: 1px dashed tomato;*/
+}
+
+.contents-top-wrapper .swiper-slide .card {
+  width: 300px;
+  height: 534px;
+  position: relative;
+  cursor: pointer;
+
+
+  /* todo: remove */
+  /*border: 1px solid dodgerblue;*/
+}
+
+.contents-top-wrapper .swiper-slide .card .card-img {
+  width: 300px;
+  height: 420px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.36);
+  overflow: hidden;
+}
+
+.contents-top-wrapper .swiper-slide .card .tag {
+  padding-top: 12px;
+}
+
+.contents-top-wrapper .swiper-slide .card .title {
+  padding-top: 10px;
+}
+
+.contents-top-wrapper .swiper-slide .card .tag .tag-text {
+  display: inline-block;
+  height: 24px;
+  padding: 2px 10px 5px;
+  border: 1px solid #C7C7C7;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  font-size: 0.7rem;
+  line-height: 20px;
+  color: #B1B1B1;
+  font-weight: bold;
+}
+
+.contents-top-wrapper .swiper-slide .card .title h2 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.27;
+}
+
+.contents-top-wrapper .swiper-slide .card .right-arrow-btn {
+  position: absolute;
+  bottom: 83px;
+  right: -25px;
+}
+
+.contents-top-wrapper .swiper-slide .card:hover .card-img {
+  border: 2px solid #f9be2c;
+}
+
+.contents-top-wrapper .swiper-slide .card:hover .right-arrow-btn img {
+  content: url("./assets/right-arrow-btn-hover.svg");
+}
