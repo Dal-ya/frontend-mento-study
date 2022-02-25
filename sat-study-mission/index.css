@@ -1,4 +1,5 @@
 @import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
 @font-face {
   font-family: 'Recipekorea';
@@ -12,14 +13,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
 .display-wrapper {
   width: 1920px;
   margin: 0 auto;
   position: relative;
-
-  /* Todo: remove */
-  /*border: 1px dashed dodgerblue;*/
-  /*height: 1500px;*/
 }
 
 .display-wrapper-top-bg {
@@ -34,7 +35,6 @@
 .container {
   padding: 0 80px;
 }
-
 
 /* ========================== */
 /** nav */
@@ -108,7 +108,7 @@
 }
 
 .contents-top-wrapper .desc .text h1{
-  font-size: 3.6rem;
+  font-size: 3.3rem;
   font-weight: bold;
   letter-spacing: 1.8px;
 }
@@ -143,9 +143,6 @@
   margin-left: 100px;
   width: 1380px;
   min-width: 1380px;
-
-  /* todo: remove */
-  /*border: 1px dashed tomato;*/
 }
 
 .contents-top-wrapper .swiper-slide .card {
@@ -153,10 +150,6 @@
   height: 534px;
   position: relative;
   cursor: pointer;
-
-
-  /* todo: remove */
-  /*border: 1px solid dodgerblue;*/
 }
 
 .contents-top-wrapper .swiper-slide .card .card-img {
@@ -330,7 +323,6 @@
   background-color: #646363;
 }
 
-
 .example-list-wrapper .example-list-main .example-list-main-content.exam-list-main-first {
   background-image: url("./assets/exam_img_01.webp");
   background-size: cover;
@@ -394,7 +386,6 @@
   margin-top: 10px;
 }
 
-
 .ye-ba-se-next {
   margin-top: 30px;
   display: flex;
@@ -402,6 +393,10 @@
   align-items: center;
   position: relative;
   cursor: pointer;
+}
+
+.ye-ba-se-next:hover .ye-ba-se-arrow {
+  transform: translate(10%);
 }
 
 .ye-ba-se-next .text-green {
@@ -418,8 +413,13 @@
 
 .ye-ba-se-arrow {
   position: absolute;
-  left: 80px
+  left: 80px;
+  transition: 0.4s;
 }
+
+/* ========================== */
+/** partner-list */
+/* ========================== */
 
 section.partner-list {
   padding-top: 70px;
@@ -435,6 +435,9 @@ section.partner-list {
   height: 40px;
 }
 
+/* ========================== */
+/** footer */
+/* ========================== */
 
 footer {
   background-color: #444444;
